@@ -1,5 +1,5 @@
-- name: Create Resource Group
-  ansible.builtin.include_tasks: create_rg.yml
+#- name: Create Resource Group
+#  ansible.builtin.include_tasks: create_rg.yml
 
 - name: Provision AKS Cluster
   ansible.builtin.include_tasks: create_aks.yml
