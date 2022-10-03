@@ -1,3 +1,4 @@
+cluster_name: "{{ my_cluster_name | default('sydney-cluster-eks-prod-env001') }}"
 aws_region: "{{ my_region | default('us-east-1') }}"
 ec2_resource_prefix: "{{ resource_prefix }}"
 ec2_environment: "{{ ec2_resource_prefix }}"

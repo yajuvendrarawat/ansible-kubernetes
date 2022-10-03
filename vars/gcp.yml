@@ -1,3 +1,4 @@
+cluster_name: "{{ my_cluster_name | default('sydney-cluster-gke-prod-env001') }}"
 gcp_prefix: "{{ resource_prefix }}"
 gcp_project: "{{ lookup('env', 'GCP_PROJECT') | default('n/a', True) }}"
 gcp_cred_type: "{{ lookup('env', 'GCP_AUTH_KIND') | default('n/a', True) }}"

@@ -1,4 +1,6 @@
-cluster_name: "{{ my_cluster_name | default('my-cluster') }}"
+#cluster_name: "{{ my_cluster_name | default('sydney-cluster-eks-prod-env001') }}"
+#cluster_name: "{{ my_cluster_name | default('sydney-cluster-aks-prod-env001') }}"
+#cluster_name: "{{ my_cluster_name | default('sydney-cluster-gke-prod-env001') }}"
 resource_prefix: "{{ my_resource_prefix | default('kubernetes') }}"
 k8s_version: "{{ my_k8s_version | default('1.20') }}"
 cloud_provider: "{{ cloud | default('azure') }}"

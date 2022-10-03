@@ -1,6 +1,8 @@
+cluster_name: "{{ my_cluster_name | default('sydney-cluster-aks-prod-env001') }}"
 az_location: 'East US'
 az_prefix: "{{ resource_prefix }}"
-az_resource_group: "{{ az_prefix }}-rg"
+#az_resource_group: "{{ az_prefix }}-rg"
+az_resource_group: "openenv-2r5vq"
 # az_virtual_network: "{{ az_prefix }}-vnet"
 # az_subnet: "{{ az_prefix }}-subnet"
 # az_public_ip: "{{ az_prefix }}-pubip"
@@ -15,7 +17,7 @@ az_vm_number: "{{ node_count }}"
 az_vm_min: "{{ min_node_count }}"
 az_vm_max: "{{ max_node_count }}"
 # ['1.18.17', '1.18.19', '1.19.9', '1.19.11', '1.20.5', '1.20.7', '1.21.1', '1.21.2']
-az_k8s_version: "{{ my_k8s_version | default('1.20.7') }}"
+az_k8s_version: "{{ my_k8s_version | default('1.23.8') }}"
 
 # az_cidr_block: "172.16.0.0/16"
 # az_subnet_block: "172.16.0.0/24"
