@@ -11,7 +11,7 @@
         name: "{{ spoke.name }}"
       spec:
         hubAcceptsClient: true
-    kubeconfig: "{{ acm.acm_hub_kubeconfig }}"
+    #kubeconfig: "{{ acm.acm_hub_kubeconfig }}"
     state: present
   register: managedcluster
   loop: "{{ acm.spokes }}"
@@ -20,7 +20,7 @@
 
 - name: Create KlusterletAddonConfig Resource
   kubernetes.core.k8s:
-    kubeconfig: "{{ acm.acm_hub_kubeconfig }}"
+    #kubeconfig: "{{ acm.acm_hub_kubeconfig }}"
     state: present
     definition:
       apiVersion: agent.open-cluster-management.io/v1
@@ -67,7 +67,7 @@
   kubernetes.core.k8s_info:
     api_version: v1
     kind: Secret
-    kubeconfig: "{{ acm.acm_hub_kubeconfig }}"
+    #kubeconfig: "{{ acm.acm_hub_kubeconfig }}"
     name: "{{ spoke.name }}-import"
     namespace: "{{ spoke.name }}"
   register: payloads
