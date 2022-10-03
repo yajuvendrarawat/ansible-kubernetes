@@ -13,6 +13,10 @@
     - name: Include cloud variables
       ansible.builtin.include_vars: "./vars/{{ cloud_provider }}.yml"
 
+    - name: Include SSH Key
+      #ansible.builtin.include_vars: "./vars/ssh.yml"
+      when: cloud_provider == 'azure'
+
     - name: Include ACM vars
       ansible.builtin.include_vars: "./vars/acm.yml"
       when: acm_import
