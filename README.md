@@ -68,3 +68,7 @@ ansible-navigator run main.yml -v --extra-vars "cloud_provider=azure"
 ```
 
 **Note**: I use [podman](https://podman.io/) as my container engine (`container-engine`). You can change to another alternative in the ansible [navigator config file](ansible-navigator.yml).
+
+**Note** For Tower/AAP we need to setup the custom KUBE credentials K8S_AUTH_KUBECONFIG - Ref - https://blog.networktocode.com/post/kubernetes-collection-ansible/
+
+
